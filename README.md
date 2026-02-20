@@ -1,47 +1,50 @@
 # Fliiq
 
-The AI agent you actually own. One command to plan, build, and automate — with persistent memory and self-generating skills.
+The AI agent that **builds itself**.
+
+Manages your email, runs your calendar, automates your workflows, and builds new skills when it needs them. A personal AI that actually does things — all from your terminal.
+
+> Local-first. Bring your own keys.
 
 ## Quick Start
 
 ```bash
 pip install fliiq
-fliiq init                  # Creates ~/.fliiq/ + .env template
-# Edit ~/.fliiq/.env with your API key (Anthropic, OpenAI, or Gemini)
-fliiq                       # Interactive REPL from any terminal
+fliiq init
+fliiq
 ```
 
-## What is Fliiq?
+## Why Fliiq?
 
-Fliiq is a local-first AI agent that runs from your terminal. It reads and writes files, runs shell commands, manages your email and calendar, sends messages, browses the web, and remembers everything across sessions. It builds its own skills when it doesn't know how to do something.
+**It evolves** — When Fliiq can't do something, it researches the API, writes the skill, and uses it — right in the conversation. Your agent gets more capable every time you use it.
 
-Three execution modes: **autonomous** (full control), **supervised** (approve each action), and **plan** (plan first, then execute).
+**It learns** — Persistent memory across sessions. MEMORY.md, daily logs, and skill-specific memories carry context forward.
 
-## Features
+**You own it** — Runs locally. Your API keys, your data. No cloud lock-in, no subscription to a platform you don't control.
 
-**29 built-in skills** — File I/O, search, shell commands, web search, web navigation, email (Gmail OAuth), SMS (Twilio), Telegram, text-to-speech (MiniMax), Google Calendar, contacts, Spotify, and more.
+## Powerful out of the box. Self-extending when you need more.
 
-**Persistent memory** — The agent remembers across sessions. Curated knowledge, daily logs, and keyword search across all memory files.
+**Skills System** — 29 built-in skills. Self-generating: when Fliiq can't do something, it builds the skill. File I/O, search, shell, web search, web navigation, email (Gmail OAuth), SMS (Twilio), Telegram, text-to-speech, Google Calendar, contacts, Spotify, and more.
 
-**Self-generating skills** — When the agent can't do something, it researches the API, generates a complete skill package, tests it, and installs it. Skills persist in `~/.fliiq/skills/`.
+**Daemon & Jobs** — Background process for cron, interval, one-shot, and webhook-triggered automations. Each job gets its own memory and audit trail.
 
-**Daemon and scheduled jobs** — Background process that runs tasks on cron, interval, or webhook triggers. Each job gets its own memory and audit trail.
+**Channels** — Give Fliiq its own Gmail, phone number, and Telegram bot. Message it like a person. Text-to-speech for Cantonese, Mandarin, and English audio.
 
-**Customizable identity** — SOUL.md defines personality. Playbooks add domain-specific instructions. Both are fully editable per-project.
+**Memory & Identity** — Persistent memory across sessions. SOUL.md defines personality. Playbooks add expertise. Fully editable per-project.
 
-**Multi-channel communication** — Send and receive email, SMS, and Telegram messages. Two modes: Fliiq's own channels (people message the bot) and managing your accounts (the agent reads your inbox, sends on your behalf).
+**Multi-LLM** — Anthropic (Claude), OpenAI (GPT-4), Google (Gemini), and any OpenAI-compatible server (Ollama, vLLM, llama.cpp, LM Studio). Switch providers per-command.
 
-**Google Calendar** — Full calendar management via OAuth. List calendars, create/update/delete events, check availability across multiple accounts.
+**MCP Integration** — Connect any [Model Context Protocol](https://modelcontextprotocol.io) server and its tools are available alongside built-in skills.
 
-**Text-to-speech** — Generate audio pronunciation via MiniMax TTS. Ask "how do you say X in Cantonese?" and get back Chinese characters + playable audio via Telegram. Supports Cantonese, Mandarin, English, and more.
+**Web Navigation** — Browser automation powered by [browser-use](https://github.com/browser-use/browser-use). Navigate websites, extract information, fill forms.
 
-**Web navigation** — Browser automation powered by [browser-use](https://github.com/browser-use/browser-use). Navigate websites, extract information, fill forms.
+## Quick Example
 
-**MCP support** — Connect any [Model Context Protocol](https://modelcontextprotocol.io) server and its tools appear alongside built-in skills.
+```bash
+fliiq run "build a Flask todo app with SQLite"
+```
 
-**Multi-provider** — Works with Anthropic (Claude), OpenAI (GPT-4), Google (Gemini), and any OpenAI-compatible server (Ollama, vLLM, llama.cpp, LM Studio).
-
-**Full-screen TUI** — Terminal UI with message scrolling, mode indicator, and keyboard shortcuts.
+Fliiq decomposes the task, creates files, installs dependencies, starts the dev server, and verifies everything works — all in one command.
 
 ## Usage
 
@@ -159,6 +162,7 @@ Fliiq gives an LLM agent access to your filesystem, email, and shell. That power
 
 ## Links
 
+- [Docs](https://docs.fliiq.ai)
 - [PyPI](https://pypi.org/project/fliiq/)
 - [Changelog](CHANGELOG.md)
 - [Report a bug](https://github.com/fliiq-ai/fliiq/issues/new?template=bug_report.yml)
