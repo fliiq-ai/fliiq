@@ -1,0 +1,46 @@
+name: Feature Request
+description: Suggest a new feature or improvement
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        We'd love to hear your ideas for making Fliiq better.
+
+  - type: textarea
+    id: use-case
+    attributes:
+      label: Use case
+      description: What are you trying to accomplish? Describe the problem or workflow.
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: Proposed solution
+      description: How would you like this to work? Be as specific as you want.
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+      description: Have you tried any workarounds? Other tools that solve this?
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category
+      options:
+        - New skill
+        - Existing skill improvement
+        - CLI / UX
+        - Daemon / Jobs
+        - Memory system
+        - Integration (email, calendar, Telegram, etc.)
+        - Model / Provider support
+        - Other
+    validations:
+      required: true
