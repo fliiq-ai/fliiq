@@ -2,6 +2,19 @@
 
 All notable changes to Fliiq are documented here.
 
+## [1.7.3] - 2026-02-21
+
+### Fixed
+- Resolved all 61 ruff lint errors across the codebase (unused imports, line length, whitespace, bare excepts, lambda assignments)
+
+### Internal
+- Added automated release pipeline
+
+## [1.7.2] - 2026-02-20
+
+### Changed
+- Upgraded default Anthropic model from Claude Sonnet 4.5 to Sonnet 4.6
+
 ## [1.7.1] - 2026-02-18
 
 ### Added
