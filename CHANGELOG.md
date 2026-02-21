@@ -2,6 +2,15 @@
 
 All notable changes to Fliiq are documented here.
 
+## [1.8.0] - 2026-02-20
+
+### Added
+- Google Drive skill — list, search, upload, download, export files, create folders (`google_drive`)
+- Google Sheets skill — create spreadsheets, read/write cell ranges, append rows (`google_sheets`)
+- Google Docs skill — create/read documents, insert text, batch formatting (`google_docs`)
+- Google Slides skill — create/read presentations, add slides, insert text, batch updates (`google_slides`)
+- OAuth scope expansion for all new Google services via `fliiq google auth`
+
 ## [1.7.3] - 2026-02-21
 
 ### Fixed

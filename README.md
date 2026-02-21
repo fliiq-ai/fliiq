@@ -52,7 +52,7 @@ If you try to use a skill without its dependencies, the agent will tell you exac
 
 **Agent loop** — Claude Code-style architecture where the model plans, executes, and evaluates in a single loop. Three modes: autonomous (full control), supervised (approve each tool call), and plan (plan only, then approve to execute).
 
-**29 core skills** — File I/O (`read_file`, `write_file`, `edit_file`, `list_directory`), search (`grep`, `find`), system (`shell`, `deps`, `dev_server`), web (`web_search`, `fetch_html`, `web_navigate`), memory (`memory_read`, `memory_write`, `memory_search`), email (`send_email`, `receive_emails`, `mark_email_read`, `delete_email`, `archive_email`), SMS (`send_sms`, `receive_sms`), messaging (`send_telegram`, `send_telegram_audio`), audio (`text_to_speech`), calendar (`google_calendar`), contacts (`find_email`), time (`get_current_time`), and music (`spotify`).
+**33 core skills** — File I/O (`read_file`, `write_file`, `edit_file`, `list_directory`), search (`grep`, `find`), system (`shell`, `deps`, `dev_server`), web (`web_search`, `fetch_html`, `web_navigate`), memory (`memory_read`, `memory_write`, `memory_search`), email (`send_email`, `receive_emails`, `mark_email_read`, `delete_email`, `archive_email`), SMS (`send_sms`, `receive_sms`), messaging (`send_telegram`, `send_telegram_audio`), audio (`text_to_speech`), Google Workspace (`google_calendar`, `google_drive`, `google_sheets`, `google_docs`, `google_slides`), contacts (`find_email`), time (`get_current_time`), and music (`spotify`).
 
 **Persistent memory** — Curated `MEMORY.md` loaded every session. Daily logs, skill-specific memories, and keyword search across all memory files. The agent reads and updates memory naturally.
 
@@ -64,7 +64,7 @@ If you try to use a skill without its dependencies, the agent will tell you exac
 
 **Email, SMS, and Telegram** — Send and receive email (Gmail OAuth or app password), SMS (Twilio), and Telegram messages. Two modes: Fliiq's own channels (people message the bot) and managing your accounts (the agent reads your inbox, sends on your behalf).
 
-**Google Calendar** — Full calendar management via OAuth. List calendars, create/update/delete events, check availability. Multi-account support — authorize multiple Google accounts.
+**Google Workspace** — Full integration via OAuth. Calendar (list/create/update/delete events), Drive (list/search/upload/download/export files, create folders), Sheets (create spreadsheets, read/write cell ranges, append rows), Docs (create/read documents, insert text, batch formatting), and Slides (create/read presentations, add slides, insert text, batch updates). Multi-account support — authorize multiple Google accounts.
 
 **Web navigation** — Browser automation powered by [browser-use](https://github.com/browser-use/browser-use). The agent can navigate websites, extract information, fill forms, and interact with web pages. Runs headless by default or with `--show-browser` to watch it work. Includes a safety checkpoint that pauses for user confirmation before any irreversible action (form submissions, payments, account creation).
 
@@ -111,7 +111,7 @@ fliiq playbook show coding          # Display a playbook
 fliiq playbook create devops        # Scaffold a new custom playbook
 
 # Google accounts
-fliiq google auth                   # Authorize a Google account (Calendar + Gmail)
+fliiq google auth                   # Authorize a Google account (Calendar, Gmail, Drive, Sheets, Docs, Slides)
 fliiq google accounts               # List authorized accounts
 
 # MCP servers
@@ -427,10 +427,10 @@ Created by `fliiq init`. Emails are auto-added when you run `fliiq google auth`.
 
 ### Google Account Integration
 
-Authorize your Google accounts so the agent can manage your Gmail and Calendar:
+Authorize your Google accounts so the agent can manage your Gmail, Calendar, Drive, Sheets, Docs, and Slides:
 
 ```bash
-fliiq google auth           # Opens browser for OAuth consent (Calendar + Gmail)
+fliiq google auth           # Opens browser for OAuth consent (full Google Workspace)
 fliiq google accounts       # List authorized accounts
 ```
 
@@ -438,7 +438,7 @@ Run `fliiq google auth` once per Google account. Each gets OAuth tokens stored i
 
 **Prerequisites:**
 1. Create a project at [Google Cloud Console](https://console.cloud.google.com)
-2. Enable **Google Calendar API** and **Gmail API**
+2. Enable **Google Calendar API**, **Gmail API**, **Google Drive API**, **Google Sheets API**, **Google Docs API**, and **Google Slides API**
 3. Create OAuth 2.0 credentials (Desktop app, redirect URI `http://localhost:8080/callback`)
 4. Add these to your `.env`:
 
@@ -447,7 +447,7 @@ GOOGLE_CLIENT_ID=your-client-id
 GOOGLE_CLIENT_SECRET=your-client-secret
 ```
 
-Then ask the agent things like "check my email," "book a meeting tomorrow at 3pm," or "find my availability this week."
+Then ask the agent things like "check my email," "book a meeting tomorrow at 3pm," "list my Drive files," "read the budget spreadsheet," or "add a slide to my presentation."
 
 ### Communication Channels
 
