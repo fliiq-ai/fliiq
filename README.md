@@ -2,33 +2,6 @@
 
 The AI agent you actually own. One command to plan, build, and automate — with persistent memory and self-generating skills.
 
-## Demos (via Telegram)
-
-<table>
-<tr>
-<td align="center"><b>Language Tutor</b></td>
-<td align="center"><b>Fitness Coach</b></td>
-<td align="center"><b>CI/CD Notifications</b></td>
-</tr>
-<tr>
-<td>
-
-https://github.com/user-attachments/assets/3f01447a-d73d-43d7-970b-03141e680396
-
-</td>
-<td>
-
-https://github.com/user-attachments/assets/6b0e072a-06b1-48b4-8b33-0c8fd512d236
-
-</td>
-<td>
-
-https://github.com/user-attachments/assets/3cc6cacc-dade-4fe5-b470-b4c1b10117e3
-
-</td>
-</tr>
-</table>
-
 ## Quick Start
 
 ```bash
@@ -79,7 +52,7 @@ If you try to use a skill without its dependencies, the agent will tell you exac
 
 **Agent loop** — Claude Code-style architecture where the model plans, executes, and evaluates in a single loop. Three modes: autonomous (full control), supervised (approve each tool call), and plan (plan only, then approve to execute).
 
-**36 core skills** — File I/O (`read_file`, `write_file`, `edit_file`, `list_directory`), search (`grep`, `find`), system (`shell`, `deps`, `dev_server`), web (`web_search`, `fetch_html`, `web_navigate`), memory (`memory_read`, `memory_write`, `memory_search`), email (`send_email`, `receive_emails`, `mark_email_read`, `delete_email`, `archive_email`), SMS (`send_sms`, `receive_sms`), messaging (`send_telegram`, `send_telegram_audio`), audio (`text_to_speech`), Google Workspace (`google_calendar`, `google_drive`, `google_sheets`, `google_docs`, `google_slides`), productivity (`tasks`, `contacts`, `reminders`), contacts lookup (`find_email`), time (`get_current_time`), and music (`spotify`).
+**37 core skills** — File I/O (`read_file`, `write_file`, `edit_file`, `list_directory`), search (`grep`, `find`), system (`shell`, `deps`, `dev_server`), web (`web_search`, `fetch_html`, `web_navigate`), memory (`memory_read`, `memory_write`, `memory_search`), email (`send_email`, `receive_emails`, `mark_email_read`, `delete_email`, `archive_email`), SMS (`send_sms`, `receive_sms`), messaging (`send_telegram`, `send_telegram_audio`), audio (`speech_to_text`, `text_to_speech`), Google Workspace (`google_calendar`, `google_drive`, `google_sheets`, `google_docs`, `google_slides`), productivity (`tasks`, `contacts`, `reminders`), contacts lookup (`find_email`), time (`get_current_time`), and music (`spotify`).
 
 **Persistent memory** — Curated `MEMORY.md` loaded every session. Daily logs, skill-specific memories, and keyword search across all memory files. The agent reads and updates memory naturally.
 

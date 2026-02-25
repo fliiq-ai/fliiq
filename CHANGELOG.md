@@ -2,6 +2,13 @@
 
 All notable changes to Fliiq are documented here.
 
+## [1.10.0] - 2026-02-25
+
+### Added
+- `speech_to_text` skill — transcribe audio files (OGG, MP3, M4A, WAV, WEBM) to text using OpenAI Whisper API
+- Telegram voice message support — send a voice note to the bot and it transcribes, processes, and responds; replies can be delivered as audio via TTS
+- Typing indicator shown in Telegram while the agent is processing
+
 ## [1.9.0] - 2026-02-23
 
 ### Added
