@@ -2,6 +2,13 @@
 
 All notable changes to Fliiq are documented here.
 
+## [1.9.0] - 2026-02-23
+
+### Added
+- Tasks skill — create, update, list, complete, and delete personal tasks with priorities, due dates, tags, and project grouping (`tasks`)
+- Contacts skill — manage contacts and relationships, log interactions, and track deals through a sales pipeline (`contacts`)
+- Reminders skill — set, list, and cancel one-time or recurring reminders delivered via Telegram, email, or SMS (`reminders`)
+
 ## [1.8.0] - 2026-02-20
 
 ### Added
