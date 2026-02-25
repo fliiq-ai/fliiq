@@ -2,7 +2,7 @@
 
 The AI agent you actually own. One command to plan, build, and automate — with persistent memory and self-generating skills.
 
-## Demos
+## Demos (via Telegram)
 
 <table>
 <tr>
@@ -18,7 +18,7 @@ https://github.com/user-attachments/assets/3f01447a-d73d-43d7-970b-03141e680396
 </td>
 <td>
 
-https://github.com/user-attachments/assets/c7c2b125-76b1-4cf7-b49a-3dea33ea27e2
+https://github.com/user-attachments/assets/6b0e072a-06b1-48b4-8b33-0c8fd512d236
 
 </td>
 <td>
