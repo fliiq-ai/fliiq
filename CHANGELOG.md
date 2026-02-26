@@ -2,6 +2,13 @@
 
 All notable changes to Fliiq are documented here.
 
+## [1.13.0] - 2026-02-26
+
+### Added
+- `excel` skill — create, read, and write Excel (.xlsx) files with support for multiple sheets, cell ranges, and structured data
+- `powerpoint` skill — create, read, and modify PowerPoint (.pptx) presentations; add slides, insert text, extract content
+- `word` skill — create, read, and modify Word (.docx) documents; add headings, paragraphs, and tables
+
 ## [1.12.0] - 2026-02-25
 
 ### Added
