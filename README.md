@@ -52,7 +52,7 @@ If you try to use a skill without its dependencies, the agent will tell you exac
 
 **Agent loop** — Claude Code-style architecture where the model plans, executes, and evaluates in a single loop. Three modes: autonomous (full control), supervised (approve each tool call), and plan (plan only, then approve to execute).
 
-**37 core skills** — File I/O (`read_file`, `write_file`, `edit_file`, `list_directory`), search (`grep`, `find`), system (`shell`, `deps`, `dev_server`), web (`web_search`, `fetch_html`, `web_navigate`), memory (`memory_read`, `memory_write`, `memory_search`), email (`send_email`, `receive_emails`, `mark_email_read`, `delete_email`, `archive_email`), SMS (`send_sms`, `receive_sms`), messaging (`send_telegram`, `send_telegram_audio`), audio (`speech_to_text`, `text_to_speech`), Google Workspace (`google_calendar`, `google_drive`, `google_sheets`, `google_docs`, `google_slides`), productivity (`tasks`, `contacts`, `reminders`), contacts lookup (`find_email`), time (`get_current_time`), and music (`spotify`).
+**47 core skills** — File I/O (`read_file`, `write_file`, `edit_file`, `list_directory`), search (`grep`, `find`), system (`shell`, `deps`, `dev_server`), web (`web_search`, `fetch_html`, `web_navigate`, `summarize`), memory (`memory_read`, `memory_write`, `memory_search`), email (`send_email`, `receive_emails`, `mark_email_read`, `delete_email`, `archive_email`), SMS (`send_sms`, `receive_sms`), messaging (`send_telegram`, `send_telegram_audio`, `slack`, `discord`, `whatsapp`), voice (`voice_call`), audio (`speech_to_text`, `text_to_speech`), Google Workspace (`google_calendar`, `google_drive`, `google_sheets`, `google_docs`, `google_slides`), productivity (`tasks`, `contacts`, `reminders`, `notion`, `trello`), project management (`github`), weather (`weather`), image generation (`image_gen`), contacts lookup (`find_email`), time (`get_current_time`), and music (`spotify`).
 
 **Persistent memory** — Curated `MEMORY.md` loaded every session. Daily logs, skill-specific memories, and keyword search across all memory files. The agent reads and updates memory naturally.
 
@@ -62,7 +62,7 @@ If you try to use a skill without its dependencies, the agent will tell you exac
 
 **Customizable identity** — SOUL.md defines the agent's personality. Playbooks add domain-specific instructions. Bundled personas (`--persona product-manager`, `--persona frontend`) activate specialized expertise. All scaffolded from templates and fully editable per-project.
 
-**Email, SMS, and Telegram** — Send and receive email (Gmail OAuth or app password), SMS (Twilio), and Telegram messages. Two modes: Fliiq's own channels (people message the bot) and managing your accounts (the agent reads your inbox, sends on your behalf).
+**Email, SMS, and Messaging** — Send and receive email (Gmail OAuth or app password), SMS (Twilio), and messages via Telegram, Slack, Discord, and WhatsApp. Voice calls via Twilio. Two modes: Fliiq's own channels (people message the bot) and managing your accounts (the agent reads your inbox, sends on your behalf).
 
 **Google Workspace** — Full integration via OAuth. Calendar (list/create/update/delete events), Drive (list/search/upload/download/export files, create folders), Sheets (create spreadsheets, read/write cell ranges, append rows), Docs (create/read documents, insert text, batch formatting), and Slides (create/read presentations, add slides, insert text, batch updates). Multi-account support — authorize multiple Google accounts.
 

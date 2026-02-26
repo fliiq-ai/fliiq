@@ -2,6 +2,20 @@
 
 All notable changes to Fliiq are documented here.
 
+## [1.11.0] - 2026-02-25
+
+### Added
+- `weather` skill — get current weather and forecasts for any location (no API key required)
+- `summarize` skill — extract and clean content from URLs, local files, or raw text for analysis
+- `image_gen` skill — generate images from text prompts using OpenAI DALL-E 3
+- `slack` skill — send messages, react with emoji, pin messages, list channels, and read message history in Slack workspaces
+- `discord` skill — send messages, react, list channels, and read message history in Discord servers
+- `whatsapp` skill — send WhatsApp messages and templates via Meta's WhatsApp Business Cloud API
+- `voice_call` skill — make outbound voice calls via Twilio with text-to-speech message delivery
+- `notion` skill — search, create, read, and update Notion pages and databases
+- `github` skill — manage GitHub repositories: list/create issues and PRs, view CI runs, get repo info
+- `trello` skill — manage Trello boards, lists, and cards; create/move/archive cards and add comments
+
 ## [1.10.0] - 2026-02-25
 
 ### Added
