@@ -2,6 +2,11 @@
 
 All notable changes to Fliiq are documented here.
 
+## [1.12.0] - 2026-02-25
+
+### Added
+- `google_calendar` skill — Google Meet link support: pass `add_google_meet: true` when creating or updating calendar events to automatically attach a Google Meet video conference link
+
 ## [1.11.0] - 2026-02-25
 
 ### Added

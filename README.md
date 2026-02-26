@@ -64,7 +64,7 @@ If you try to use a skill without its dependencies, the agent will tell you exac
 
 **Email, SMS, and Messaging** — Send and receive email (Gmail OAuth or app password), SMS (Twilio), and messages via Telegram, Slack, Discord, and WhatsApp. Voice calls via Twilio. Two modes: Fliiq's own channels (people message the bot) and managing your accounts (the agent reads your inbox, sends on your behalf).
 
-**Google Workspace** — Full integration via OAuth. Calendar (list/create/update/delete events), Drive (list/search/upload/download/export files, create folders), Sheets (create spreadsheets, read/write cell ranges, append rows), Docs (create/read documents, insert text, batch formatting), and Slides (create/read presentations, add slides, insert text, batch updates). Multi-account support — authorize multiple Google accounts.
+**Google Workspace** — Full integration via OAuth. Calendar (list/create/update/delete events, attach Google Meet links), Drive (list/search/upload/download/export files, create folders), Sheets (create spreadsheets, read/write cell ranges, append rows), Docs (create/read documents, insert text, batch formatting), and Slides (create/read presentations, add slides, insert text, batch updates). Multi-account support — authorize multiple Google accounts.
 
 **Web navigation** — Browser automation powered by [browser-use](https://github.com/browser-use/browser-use). The agent can navigate websites, extract information, fill forms, and interact with web pages. Runs headless by default or with `--show-browser` to watch it work. Includes a safety checkpoint that pauses for user confirmation before any irreversible action (form submissions, payments, account creation).
 
