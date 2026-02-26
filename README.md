@@ -70,7 +70,7 @@ If you try to use a skill without its dependencies, the agent will tell you exac
 
 **MCP support** — Connect any MCP server (stdio or streamable-http) and its tools are available to the agent alongside built-in skills. One command to add, test, and manage servers.
 
-**Full-screen TUI** — Textual-based interface with message scrolling, mode indicator, thinking timer, and keyboard shortcuts (`fliiq tui`).
+**Full-screen TUI** — Textual-based interface with message scrolling, mode indicator, live thinking timer, incremental tool call display, redesigned status bar, and keyboard shortcuts (`fliiq tui`).
 
 **Update notifications** — Fliiq checks PyPI for new versions in the background (zero startup impact). When an update is available, you'll see a one-liner in the REPL, TUI, or after `fliiq run` completes. Disable with `FLIIQ_NO_UPDATE_CHECK=1`.
 

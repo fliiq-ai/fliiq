@@ -2,6 +2,11 @@
 
 All notable changes to Fliiq are documented here.
 
+## [1.14.0] - 2026-02-26
+
+### Improved
+- TUI overhaul (`fliiq tui`): live thinking timer, incremental tool call display as they execute, and a redesigned status bar
+
 ## [1.13.0] - 2026-02-26
 
 ### Added
