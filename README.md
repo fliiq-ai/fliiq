@@ -62,7 +62,7 @@ If you try to use a skill without its dependencies, the agent will tell you exac
 
 **Customizable identity** — SOUL.md defines the agent's personality. Playbooks add domain-specific instructions. Bundled personas (`--persona product-manager`, `--persona frontend`, `--persona blog-seo`) activate specialized expertise. Jobs can load a playbook directly via the `playbook:` field in job YAML. All scaffolded from templates and fully editable per-project.
 
-**Email, SMS, and Messaging** — Send and receive email (Gmail OAuth or app password), SMS (Twilio), and messages via Telegram, Slack, Discord, and WhatsApp. Voice calls via Twilio. Two modes: Fliiq's own channels (people message the bot) and managing your accounts (the agent reads your inbox, sends on your behalf).
+**Email, SMS, and Messaging** — Send and receive email (Gmail OAuth or app password), SMS (Twilio), and messages via Telegram, Slack, Discord, and WhatsApp. Voice calls via Twilio. Telegram supports Forum Topics — send job notifications to specific threads in group chats. Two modes: Fliiq's own channels (people message the bot) and managing your accounts (the agent reads your inbox, sends on your behalf).
 
 **Google Workspace** — Full integration via OAuth. Calendar (list/create/update/delete events, attach Google Meet links), Drive (list/search/upload/download/export files, create folders), Sheets (create spreadsheets, read/write cell ranges, append rows), Docs (create/read documents, insert text, batch formatting), and Slides (create/read presentations, add slides, insert text, batch updates). Multi-account support — authorize multiple Google accounts.
 
@@ -489,15 +489,33 @@ These are Fliiq's OWN inboxes. The daemon monitors them for inbound messages and
 
 1. Create a bot via [@BotFather](https://t.me/BotFather) on Telegram and copy the bot token
 2. Add `TELEGRAM_BOT_TOKEN=your-bot-token` to `~/.fliiq/.env`
-3. Run the interactive setup to detect your chat ID:
+3. **Stop the daemon** before running setup (the daemon consumes updates, so setup can't see your messages while it's running):
    ```bash
+   fliiq daemon stop
    fliiq telegram setup
+   fliiq daemon start
    ```
    This will prompt you to send a message to your bot, then auto-detect and save your chat ID.
 
    **Manual alternative:** Add `TELEGRAM_ALLOWED_CHAT_IDS=<chat_id>` to `~/.fliiq/.env` directly. Comma-separate multiple IDs.
 
 > **Required:** When `TELEGRAM_BOT_TOKEN` is set, `TELEGRAM_ALLOWED_CHAT_IDS` must also be set. The daemon will refuse to start without it — this prevents unauthorized users from accessing your agent.
+
+**Forum Topics (threaded conversations)**
+
+To organize job notifications into separate threads (e.g., Tennis Coach, GTM Strategy), use a Telegram supergroup with Topics enabled:
+
+1. Create a Telegram group and enable "Topics" in group settings
+2. Add the Fliiq bot to the group and promote it to admin (required for creating topics)
+3. Run `fliiq telegram setup` (daemon stopped) and send a message in the group
+4. Add `channel: "Topic Name"` to each job's delivery config:
+   ```yaml
+   delivery:
+     type: telegram
+     to: "<group_chat_id>"
+     channel: "Tennis Coach"
+   ```
+5. Topics are auto-created on first job run. Each topic maintains its own conversation session. You can also create topics manually in Telegram for ad-hoc conversations (e.g., "Cantonese") — the bot responds in-thread automatically.
 
 **Text-to-Speech (MiniMax)**
 

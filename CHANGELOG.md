@@ -2,6 +2,11 @@
 
 All notable changes to Fliiq are documented here.
 
+## [1.18.0] - 2026-02-28
+
+### Added
+- **Telegram Forum Topics** — `send_telegram` and `send_telegram_audio` now support `message_thread_id` for sending messages and audio to specific topics in Telegram group chats with Forum Topics enabled. Useful for routing job notifications to dedicated threads (e.g., a "releases" topic in a team group).
+
 ## [1.17.0] - 2026-02-27
 
 ### Added
