@@ -2,6 +2,11 @@
 
 All notable changes to Fliiq are documented here.
 
+## [1.16.1] - 2026-02-27
+
+### Improved
+- **TUI** — applied Fliiq brand color scheme and fixed status bar layout (`fliiq tui`)
+
 ## [1.16.0] - 2026-02-27
 
 ### Improved
