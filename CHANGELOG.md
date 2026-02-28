@@ -2,6 +2,11 @@
 
 All notable changes to Fliiq are documented here.
 
+## [1.16.0] - 2026-02-27
+
+### Improved
+- **Persistent memory** — Fliiq now automatically extracts institutional knowledge from conversations. After each session, an LLM pass identifies people, ongoing topics, and decisions, then merges them into structured memory files. Context carries forward without any manual effort.
+
 ## [1.15.0] - 2026-02-27
 
 ### Added
