@@ -2,6 +2,12 @@
 
 All notable changes to Fliiq are documented here.
 
+## [1.18.1] - 2026-02-28
+
+### Fixed
+- **`skill-promote` path bug** — `fliiq skill-promote` was writing promoted skills to `<project_root>/skills/core/` instead of the correct bundled package path (`fliiq/data/skills/core/`). Fixed to use `bundled_skills_dir()`.
+- **Bundled `fetch_arxiv` and `read_pdf`** — both skills are now bundled as core skills (previously required manual promotion). Available out-of-the-box on fresh installs.
+
 ## [1.18.0] - 2026-02-28
 
 ### Added
