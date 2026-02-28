@@ -52,7 +52,7 @@ If you try to use a skill without its dependencies, the agent will tell you exac
 
 **Agent loop** — Claude Code-style architecture where the model plans, executes, and evaluates in a single loop. Three modes: autonomous (full control), supervised (approve each tool call), and plan (plan only, then approve to execute).
 
-**50 core skills** — File I/O (`read_file`, `write_file`, `edit_file`, `list_directory`), search (`grep`, `find`), system (`shell`, `deps`, `dev_server`), web (`web_search`, `fetch_html`, `web_navigate`, `summarize`), memory (`memory_read`, `memory_write`, `memory_search`), email (`send_email`, `receive_emails`, `mark_email_read`, `delete_email`, `archive_email`), SMS (`send_sms`, `receive_sms`), messaging (`send_telegram`, `send_telegram_audio`, `slack`, `discord`, `whatsapp`), voice (`voice_call`), audio (`speech_to_text`, `text_to_speech`), Google Workspace (`google_calendar`, `google_drive`, `google_sheets`, `google_docs`, `google_slides`), Office documents (`excel`, `powerpoint`, `word`), productivity (`tasks`, `contacts`, `reminders`, `notion`, `trello`), project management (`github`), weather (`weather`), image generation (`image_gen`), contacts lookup (`find_email`), time (`get_current_time`), and music (`spotify`).
+**51 core skills** — File I/O (`read_file`, `write_file`, `edit_file`, `list_directory`), search (`grep`, `find`), system (`shell`, `deps`, `dev_server`), web (`web_search`, `fetch_html`, `web_navigate`, `summarize`), research (`fetch_arxiv`), memory (`memory_read`, `memory_write`, `memory_search`), email (`send_email`, `receive_emails`, `mark_email_read`, `delete_email`, `archive_email`), SMS (`send_sms`, `receive_sms`), messaging (`send_telegram`, `send_telegram_audio`, `slack`, `discord`, `whatsapp`), voice (`voice_call`), audio (`speech_to_text`, `text_to_speech`), Google Workspace (`google_calendar`, `google_drive`, `google_sheets`, `google_docs`, `google_slides`), Office documents (`excel`, `powerpoint`, `word`), productivity (`tasks`, `contacts`, `reminders`, `notion`, `trello`), project management (`github`), weather (`weather`), image generation (`image_gen`), contacts lookup (`find_email`), time (`get_current_time`), and music (`spotify`).
 
 **Persistent memory** — Curated `MEMORY.md` loaded every session. Daily logs, skill-specific memories, and keyword search across all memory files. The agent reads and updates memory naturally.
 
@@ -71,6 +71,8 @@ If you try to use a skill without its dependencies, the agent will tell you exac
 **MCP support** — Connect any MCP server (stdio or streamable-http) and its tools are available to the agent alongside built-in skills. One command to add, test, and manage servers.
 
 **Full-screen TUI** — Textual-based interface with message scrolling, mode indicator, live thinking timer, incremental tool call display, redesigned status bar, and keyboard shortcuts (`fliiq tui`).
+
+**Colony** — Give Fliiq a mission and let its multi-agent system collaborate to deliver results. Five specialized agents (Intelligence, Research, Scout, QA, Governance) work in parallel on a shared codebase. Run with `fliiq colony start --mission "your objective"`. Generates a full session report on completion.
 
 **Update notifications** — Fliiq checks PyPI for new versions in the background (zero startup impact). When an update is available, you'll see a one-liner in the REPL, TUI, or after `fliiq run` completes. Disable with `FLIIQ_NO_UPDATE_CHECK=1`.
 
@@ -132,6 +134,14 @@ fliiq job create                    # Create a job interactively
 fliiq job run <name>                # Manual trigger
 fliiq job logs <name>               # View run history
 fliiq job delete <name>             # Remove a job
+
+# Colony — multi-agent directed mode
+fliiq colony start --mission "add OAuth to the API"   # Start with a mission
+fliiq colony start --mission "..." --dry-run          # 15-min test run
+fliiq colony status                                   # Check progress
+fliiq colony report                                   # Text report
+fliiq colony report --html                            # HTML report
+fliiq colony stop                                     # Stop early
 ```
 
 ### Chat Commands
@@ -159,6 +169,7 @@ fliiq/
     planning/   # Domain detection, playbook loading, reflection
     memory/     # Memory manager, keyword retrieval
     scheduler/  # Job executor, scheduler, run logging
+    colony/   # Multi-agent orchestrator, agents, state, reporting
     browser/  # Browser automation engine (browser-use integration)
   api/          # FastAPI daemon, webhook receiver
   data/         # Bundled skills, SOUL.md, playbooks, templates

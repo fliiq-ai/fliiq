@@ -2,6 +2,15 @@
 
 All notable changes to Fliiq are documented here.
 
+## [1.15.0] - 2026-02-27
+
+### Added
+- **Colony** — multi-agent directed mode: give Fliiq a mission and five specialized agents (Intelligence, Research, Scout, QA, Governance) collaborate to deliver results. Run with `fliiq colony start --mission "your objective"`. Supports `--dry-run` for a 15-minute test run and generates a full session report on completion.
+- `fetch_arxiv` skill — search arXiv by keyword or retrieve a specific paper by ID; returns metadata, abstracts, and optionally downloads PDFs
+
+### Fixed
+- `web_search` skill — exponential backoff retry for Brave API rate limits; reduces failed searches under heavy load
+
 ## [1.14.0] - 2026-02-26
 
 ### Improved
