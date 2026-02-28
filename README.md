@@ -60,7 +60,7 @@ If you try to use a skill without its dependencies, the agent will tell you exac
 
 **Daemon and jobs** — Background process that runs scheduled tasks. Cron, interval, one-shot, and webhook triggers. Each job gets its own memory file and audit trail. Create jobs via CLI or let the agent create them mid-conversation.
 
-**Customizable identity** — SOUL.md defines the agent's personality. Playbooks add domain-specific instructions. Bundled personas (`--persona product-manager`, `--persona frontend`) activate specialized expertise. All scaffolded from templates and fully editable per-project.
+**Customizable identity** — SOUL.md defines the agent's personality. Playbooks add domain-specific instructions. Bundled personas (`--persona product-manager`, `--persona frontend`, `--persona blog-seo`) activate specialized expertise. Jobs can load a playbook directly via the `playbook:` field in job YAML. All scaffolded from templates and fully editable per-project.
 
 **Email, SMS, and Messaging** — Send and receive email (Gmail OAuth or app password), SMS (Twilio), and messages via Telegram, Slack, Discord, and WhatsApp. Voice calls via Twilio. Two modes: Fliiq's own channels (people message the bot) and managing your accounts (the agent reads your inbox, sends on your behalf).
 

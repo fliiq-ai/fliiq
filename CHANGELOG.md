@@ -2,6 +2,12 @@
 
 All notable changes to Fliiq are documented here.
 
+## [1.17.0] - 2026-02-27
+
+### Added
+- **Job playbooks** — jobs can now load a domain playbook into their system prompt via the `playbook:` field in job YAML (e.g. `playbook: blog-seo`). Lets scheduled jobs run with specialized editorial or domain instructions without manual persona flags.
+- **Blog SEO persona** — new bundled `blog-seo` playbook with editorial standards, banned phrases list, quality gates, and content type templates. Activate with `--persona blog-seo` or set `playbook: blog-seo` in a job definition.
+
 ## [1.16.1] - 2026-02-27
 
 ### Improved
