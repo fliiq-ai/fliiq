@@ -2,6 +2,14 @@
 
 All notable changes to Fliiq are documented here.
 
+## [1.19.0] - 2026-03-01
+
+### Added
+- **Telegram per-request model override** — switch models mid-conversation without restarting the daemon. Use `/model <name>` to set a model for the session, `/model <name> <prompt>` for a one-shot override, or `/model reset` to revert to default. Supports slash-command and natural language syntax (`use the model opus-4.6 to ...`). Model aliases from `~/.fliiq/models.yaml` are resolved automatically.
+
+### Fixed
+- **Telegram double-send** — eliminated duplicate responses when the agent used `send_telegram` tool directly in a session. The listener now detects if the agent already sent a message to the chat and skips the automatic reply.
+
 ## [1.18.1] - 2026-02-28
 
 ### Fixed
