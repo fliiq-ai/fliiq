@@ -2,6 +2,12 @@
 
 All notable changes to Fliiq are documented here.
 
+## [1.20.0] - 2026-03-01
+
+### Added
+- **Daemon email listener** — when Gmail credentials are configured, the daemon now polls your inbox every 60 seconds and routes inbound messages to the agent automatically. Disable with `FLIIQ_EMAIL_LISTENER=0`. Daemon status now reports `Email: active/inactive`.
+- **Email threading** — `send_email` now supports `in_reply_to`, `references`, `cc`, and `bcc` parameters for proper conversation threading. `receive_emails` extracts `Message-ID`, `In-Reply-To`, `References`, `To`, and `CC` headers.
+
 ## [1.19.0] - 2026-03-01
 
 ### Added
