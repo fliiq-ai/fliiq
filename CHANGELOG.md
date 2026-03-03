@@ -2,6 +2,14 @@
 
 All notable changes to Fliiq are documented here.
 
+## [1.21.0] - 2026-03-02
+
+### Added
+- **Institutional Knowledge System (IKS)** — capture and retrieve structured knowledge records with four types: `decision` (what was chosen and why), `constraint` (rules that must be respected), `heuristic` (learned best practices), `domain_rule` (business/regulatory rules). Records support code anchoring with drift detection — bind a decision to a specific file and line range, and Fliiq flags it when the code changes. Query by keyword, domain, file, or tags.
+- `knowledge_save` skill — save structured knowledge records with rationale, alternatives, constraints, and code anchors
+- `knowledge_query` skill — search the knowledge base by keyword, domain, file, or tags; results ranked by relevance and confidence
+- `knowledge_update` skill — update or expire existing knowledge records
+
 ## [1.20.0] - 2026-03-01
 
 ### Added
