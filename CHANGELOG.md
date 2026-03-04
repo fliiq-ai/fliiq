@@ -2,6 +2,11 @@
 
 All notable changes to Fliiq are documented here.
 
+## [1.21.1] - 2026-03-03
+
+### Fixed
+- **Streaming LLM responses** — switched the Anthropic LLM client to streaming mode, eliminating 10-minute server timeout errors on long-running agent tasks and jobs.
+
 ## [1.21.0] - 2026-03-02
 
 ### Added
