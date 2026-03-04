@@ -2,6 +2,12 @@
 
 All notable changes to Fliiq are documented here.
 
+## [1.22.0] - 2026-03-04
+
+### Improved
+- **Persistent typing indicator** — the Telegram bot now maintains an active typing indicator throughout the entire agent loop, including long-running tasks. Previously the indicator would time out during extended processing.
+- **Job failure notifications** — when a scheduled job exhausts all retries, the daemon automatically sends a Telegram notification so you know immediately when something breaks.
+
 ## [1.21.1] - 2026-03-03
 
 ### Fixed
