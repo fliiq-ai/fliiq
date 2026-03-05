@@ -2,6 +2,11 @@
 
 All notable changes to Fliiq are documented here.
 
+## [1.22.2] - 2026-03-05
+
+### Fixed
+- **LLM call timeout** — added a configurable timeout on LLM API calls to prevent hung requests from stalling the agent indefinitely. Diagnostic error logging now surfaces the root cause when LLM calls fail.
+
 ## [1.22.1] - 2026-03-04
 
 ### Fixed
