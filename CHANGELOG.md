@@ -2,6 +2,11 @@
 
 All notable changes to Fliiq are documented here.
 
+## [1.22.1] - 2026-03-04
+
+### Fixed
+- **Email listener account** — fixed a bug where the daemon email listener was using the wrong Gmail account.
+
 ## [1.22.0] - 2026-03-04
 
 ### Improved
