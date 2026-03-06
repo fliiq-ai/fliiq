@@ -2,6 +2,12 @@
 
 All notable changes to Fliiq are documented here.
 
+## [1.23.0] - 2026-03-06
+
+### Added
+- **Audit trails** — every agent run now captures model name, provider, token usage (input + output), full tool inputs, and per-iteration timing. Data is backward compatible with existing audit files.
+- **`fliiq audit` CLI** — new commands to browse and inspect audit trails: `fliiq audit list` (tabular view with model/tokens/timing), `fliiq audit show <id>` (full detail for a specific run).
+
 ## [1.22.2] - 2026-03-05
 
 ### Fixed
