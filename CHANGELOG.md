@@ -2,6 +2,11 @@
 
 All notable changes to Fliiq are documented here.
 
+## [1.24.0] - 2026-03-06
+
+### Improved
+- **Persistent Telegram session store** — the daemon's Telegram listener now maintains a persistent session store that bridges the context gap between job executions and listener sessions. Conversation history is preserved across job runs and daemon restarts, so the bot behaves like a continuous conversation partner rather than resetting between interactions.
+
 ## [1.23.0] - 2026-03-06
 
 ### Added
