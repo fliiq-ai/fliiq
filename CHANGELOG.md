@@ -2,6 +2,11 @@
 
 All notable changes to Fliiq are documented here.
 
+## [1.25.0] - 2026-03-08
+
+### Improved
+- **Persistent session store for all channels** — the session store that was previously Telegram-only has been generalized to cover all daemon listener channels (Telegram, email, SMS). Each channel maintains per-sender conversation history that survives daemon restarts, so context is never lost between interactions regardless of which channel you use.
+
 ## [1.24.0] - 2026-03-06
 
 ### Improved
