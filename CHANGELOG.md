@@ -2,6 +2,13 @@
 
 All notable changes to Fliiq are documented here.
 
+## [1.26.1] - 2026-03-09
+
+### Fixed
+- **TUI plan-to-supervised auto-switch** — plan approval now correctly switches to supervised mode when the LLM omits `action: execute` from options (affects both TUI and REPL).
+- **TUI thinking indicator** — moved above the input area into the message region for better visual clarity; timer now pauses and resumes during user input prompts.
+- **TUI input UX** — added `ctrl+j` for multi-line newline input with a hint in the status bar.
+
 ## [1.26.0] - 2026-03-09
 
 ### Improved
