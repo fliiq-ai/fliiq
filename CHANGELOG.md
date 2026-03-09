@@ -2,6 +2,11 @@
 
 All notable changes to Fliiq are documented here.
 
+## [1.26.0] - 2026-03-09
+
+### Improved
+- **Daemon auto-restart on version upgrade** — when Fliiq is upgraded to a new version, the daemon automatically detects the version change and restarts itself to pick up the new code. No need to manually stop and restart the daemon after an upgrade.
+
 ## [1.25.0] - 2026-03-08
 
 ### Improved
