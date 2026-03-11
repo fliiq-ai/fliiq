@@ -2,6 +2,11 @@
 
 All notable changes to Fliiq are documented here.
 
+## [1.26.2] - 2026-03-09
+
+### Fixed
+- **Scheduler sleep guard** — the scheduler now detects when the system wakes from sleep and skips job runs that fired during the sleep window, preventing a burst of wasted token usage from stale cron ticks.
+
 ## [1.26.1] - 2026-03-09
 
 ### Fixed
