@@ -2,6 +2,14 @@
 
 All notable changes to Fliiq are documented here.
 
+## [1.27.0] - 2026-03-11
+
+### Added
+- **`cantonese_tts` skill** — convert text to Cantonese speech audio with accurate tonal pronunciation. Two-step pipeline: Claude translates English to Cantonese-native Traditional Chinese (using native phrasing like 唔知, 係, 嘅), then Google Cloud TTS (`yue-HK`) generates audio. Returns audio file path, Chinese text, Jyutping romanization, and file size. Pair with `send_telegram_audio` for language learning workflows.
+
+### Fixed
+- **Daemon dotenv override** — fixed an issue where the daemon was not correctly loading environment variables from the project-level `.env` file, causing credentials to fall back to defaults unexpectedly.
+
 ## [1.26.2] - 2026-03-09
 
 ### Fixed
